@@ -363,7 +363,7 @@ st.divider()
 st.caption("""
 Disclaimer:
 This Customer Review Rating Prediction System was originally created
-as part of a graduate Machine Learning course and later expanded
+as part of a graduate Machine Learning course group project and later expanded
 into an end-to-end ML system with deployment, testing,
 and interactive visualization.
 
