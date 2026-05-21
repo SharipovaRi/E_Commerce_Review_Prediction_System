@@ -1,5 +1,5 @@
 from app.main import ReviewInput
-import pytest
+
 
 def test_schema_valid_input():
     data = ReviewInput(
