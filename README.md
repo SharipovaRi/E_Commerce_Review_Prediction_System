@@ -20,7 +20,7 @@ Predictions are probabilistic and should not be used as the sole basis for busin
 * Reproducible ML pipeline
 * Automated testing (pytest + CI/CD)
 * Basic model logging for monitoring
-* Deployed as a full-stack application using Railway
+* Full-stack deployment using Railway (FastAPI backend + Streamlit frontend)
 
 ## Live Demo
 ### Streamlit App (UI):
