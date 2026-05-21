@@ -26,6 +26,13 @@ Predictions are probabilistic and should not be used as the sole basis for busin
 
 https://e-commerce-review-prediction.up.railway.app/
 
+### How to Use:
+
+1. Open Streamlit UI link
+2. Enter review details
+3. Click "Predict Rating"
+4. View prediction and probability breakdown
+   
 ### FastAPI backend link (API):
 
 https://ecommercereviewpredictionsystem-production.up.railway.app/docs
