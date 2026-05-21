@@ -21,6 +21,22 @@ Predictions are probabilistic and should not be used as the sole basis for busin
 * Automated testing (pytest + CI/CD)
 * Basic model logging for monitoring
 
+## Live Demo
+### Streamlit App (UI):
+
+https://e-commerce-review-prediction.up.railway.app/
+
+### How to Use:
+
+1. Open Streamlit UI link
+2. Enter review details
+3. Click "Predict Rating"
+4. View prediction and probability breakdown
+   
+### FastAPI backend link (API):
+
+https://ecommercereviewpredictionsystem-production.up.railway.app/docs
+
 ## Problem Statement
 Online retailers often struggle to identify dissatisfied customers early. This system enables proactive customer support and business intervention. It predicts:
 
