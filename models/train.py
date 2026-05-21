@@ -5,7 +5,8 @@ from sklearn.model_selection import train_test_split
 from models.final_pipeline_def import get_pipeline
 
 # Base directory
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 # Paths
 DATA_PATH = BASE_DIR / "data" / "raw" / "train.csv"
