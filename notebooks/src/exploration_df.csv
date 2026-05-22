@@ -1,0 +1,5 @@
+Model,Main Hyperparameters,Weighted F1 Mean,Weighted F1 Std,Weighted F1 95% CI,Macro F1 Mean,Macro F1 Std,Macro F1 95% CI
+Ensemble - Voting Classifier,"soft voting using Logistic Regression, Random Forest, and HistGradientBoosting",0.5999704649701276,0.020366008150232363,0.01785159323245985,0.5981670139194367,0.0241714917333293,0.021187246664253024
+Tree-based - Random Forest,"n_estimators=200, max_depth=15, min_samples_split=5, min_samples_leaf=2, class_weight=balanced",0.5926704429669917,0.02693495862393186,0.023609532194068285,0.5848552204593334,0.030649143686912697,0.026865158944549366
+Boosted - HistGradientBoosting,"max_iter=300, learning_rate=0.05, max_leaf_nodes=31, early_stopping=True, validation_fraction=0.1, n_iter_no_change=10",0.5704419703218463,0.021081077345534025,0.0184783790175496,0.5651698683642611,0.01866946052816544,0.016364503674937005
+Linear - Logistic Regression,"max_iter=2000, class_weight=balanced, solver=lbfgs, multi_class=multinomial",0.5395178137042765,0.02144367052400826,0.01879620595168607,0.5430203970242019,0.018401632286012316,0.01612974186988353
