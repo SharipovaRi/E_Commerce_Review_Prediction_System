@@ -54,7 +54,8 @@ Online retailers often struggle to identify dissatisfied customers early. This s
 
 ### Model
 * HistGradientBoostingClassifier (Scikit-learn)
-* Hyperparameter tuning performed 
+* Hyperparameter tuning performed using RandomizedSearchCV
+* Threshold calibration for dissatisfied customer detection
 
 ### Pipeline
 Fully modular sklearn Pipeline combining:
@@ -62,6 +63,79 @@ Fully modular sklearn Pipeline combining:
 * ColumnTransformer
 * Feature pipelines
 * Final classifier
+
+## System Architecture
+
+The project follows a modular production-style machine learning architecture separating frontend, backend, inference pipeline, and deployment components.
+
+`images/system_architecture.png`
+
+### Architecture Components
+
+#### Clients
+Users interact with the system through the Streamlit interface by:
+
+* Entering review text and product details
+* Viewing predicted ratings
+* Viewing dissatisfaction risk probabilities
+* Viewing probability distributions
+
+#### Frontend (Streamlit)
+
+The Streamlit frontend provides:
+
+* Interactive prediction interface
+* Probability visualization
+* Real-time communication with the backend API
+
+#### Backend API (FastAPI)
+
+The FastAPI backend handles:
+
+* Request validation using Pydantic
+* Data preprocessing and validation
+* Feature engineering pipeline execution
+* Model inference
+* JSON response generation
+
+#### ML Pipeline
+
+The machine learning pipeline includes:
+
+* TF-IDF vectorization
+* TruncatedSVD dimensionality reduction
+* Structured feature preprocessing
+* HistGradientBoostingClassifier inference
+
+The system combines text, numerical, and categorical features using Scikit-learn pipelines and column transformers.
+
+#### Model & Artifacts
+
+Saved artifacts include:
+
+* Trained model (`model.pkl`)
+* TF-IDF vectorizer
+* TruncatedSVD transformer
+* ColumnTransformer preprocessing pipeline
+* Encoders and scalers
+
+#### Outputs
+
+The system produces:
+
+* Predicted rating (1–5)
+* Dissatisfaction probability score
+* Full probability distribution
+* Confidence score
+
+#### Infrastructure & DevOps
+
+The project includes:
+
+* Docker containerization
+* GitHub Actions CI/CD
+* Automated testing with pytest
+* Railway deployment
 
 ## Tech Stack
 
@@ -147,8 +221,8 @@ The final model (HistGradientBoostingClassifier with TF-IDF + SVD features) achi
 Performance is consistent with a small-to-medium sized dataset and a multi-class classification setup with mixed text and structured features.
 
 ## Dissatisfied Customer Detection (Ratings 1–2)
-* Precision: 0.92
-* Recall: 0.83
+* Precision: 0.88
+* Recall: 0.85
 
 The model is effective at identifying dissatisfied customers, which is the key business objective.
 
